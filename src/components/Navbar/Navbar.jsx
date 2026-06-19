@@ -7,14 +7,15 @@ import { FaCaretDown } from 'react-icons/fa6'
 import { FaUserCircle } from "react-icons/fa";
 import { menu, dropDownList } from "./NavabrDetails"
 import Cart from "../Cart/Cart"
-import { useCart } from "../../Context/CartContext"
+import LoginForm from "../Login/LoginForm"
+
+
 
 
 const Navbar = () => {
 
     const [isCartOpen, setIsCartOpen] = useState(false)
-    const {cartItems} = useCart()
-
+    const [showLoginForm, setShowLoginForm] = useState(false)
 
     return (
         <div className='shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40'>
@@ -29,7 +30,9 @@ const Navbar = () => {
                                 Ema shop
                             </a>
                             <div className="group">
-                                <button className=' bg-primary  dark:bg-gray-800 transition-all duration-200 text-white
+                                <button 
+                                onClick={() => setShowLoginForm(true)}
+                                className=' bg-primary  dark:bg-gray-800 transition-all duration-200 text-white
                                  flex items-center gap-1 group rounded-full group-hover:px-1 group-hover:py-1'>
                                     <span className='hidden group-hover:block transition-all duration-1000'>
                                         Login
@@ -38,7 +41,7 @@ const Navbar = () => {
                                 </button>
                             </div>
                         </div>
-
+                        {showLoginForm && <LoginForm CloseHandler={() => setShowLoginForm(false)}/>}
                     </div>
                     {/*Search bar - order & darkmode btn*/}
                     <div className='flex justify-between items-center gap-4'>
@@ -75,7 +78,7 @@ const Navbar = () => {
             </div>
 
             {/* lower navbar */}
-            <div className=' justify-center hidden sm:flex'>
+            <div className=' justify-center hidden sm:flex '>
                 <ul className='sm:flex justify-center items-center gap-5' >
                     {menu.map((data) => (
                         <li key={data.id}>
@@ -106,6 +109,7 @@ const Navbar = () => {
                 </ul>
             </div>
             {isCartOpen && <Cart setIsCartOpen={setIsCartOpen} />}
+           
         </div>
     )
 }

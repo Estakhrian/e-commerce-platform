@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { CartProvider } from './Context/CartContext.jsx';
 
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <CartProvider>

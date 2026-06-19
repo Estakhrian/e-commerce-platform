@@ -19,7 +19,7 @@ const Footer = () => {
                     </div>
 
                     {/*footer details */}
-                    <div className='grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10'>
+                    <div className='grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10' id='social-media'>
                         <div className='py-8 px-4'>
                             <h1 className='sm:text-lg text-lg font-bold sm:text-left text-justify mb-3'>
                                 Important Links</h1>

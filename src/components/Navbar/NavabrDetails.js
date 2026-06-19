@@ -4,25 +4,25 @@ const menu = [
     {
         id: 1,
         name: "Home",
-        link: "/#"
+        link: "/#home"
     },
 
     {
         id: 2,
-        name: "Top Selling",
-        link: "/"
+        name: "For women",
+        link: "/#women-products"
     },
 
     {
         id: 3,
-        name: "Best Products",
-        link: "/#"
+        name: "For men",
+        link: "/#men-products"
     },
 
     {
         id: 4,
         name: "Testimonials",
-        link: "/#"
+        link: "/#testimonials"
     },
 
 ]
@@ -30,18 +30,18 @@ const menu = [
 const dropDownList = [
     {
         id: 1,
-        name: "Trending products",
-        link: "/#"
+        name: "Subscribe",
+        link: "/#subscribe"
     },
     {
         id: 2,
         name: "Best Selling",
-        link: "/#"
+        link: "/#top-selling"
     },
     {
         id: 3,
-        name: "Top Rated",
-        link: "/#"
+        name: "social Media",
+        link: "/#social-media"
     }
 ]
 

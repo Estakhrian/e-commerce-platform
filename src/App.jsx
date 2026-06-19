@@ -20,21 +20,45 @@ const App = () => {
       easing: "ease-in-out-sine",
       delay: 100
     })
-  },[])
+
+    window.history.replaceState(null, "", "/")
+  }, [])
 
 
 
   return (
     <div className='bg-white dark:bg-gray-900 dark:text-white duration-200'>
-      <Navbar />
+
+      <section id='home'>
+        <Navbar />
+      </section>
+      
       <Hero />
-      <Products />
-      <TopRateProducts /> 
+
+      <section id='women-products'>
+        <Products />
+      </section>
+
+      <section id='men-products'>
+        <TopRateProducts />
+      </section>
+
       <Banner />
-      <Subscribe />
-      <Products />
-      <Testimonials />
+
+      <section id='subscribe'>
+        <Subscribe />
+      </section>
+
+      <section id='top-selling'>
+        <Products />
+      </section>
+
+      <section id='testimonials'>
+        <Testimonials />
+      </section>
+
       <Footer />
+
     </div>
   )
 }
