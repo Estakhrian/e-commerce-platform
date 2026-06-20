@@ -51,7 +51,7 @@ const LoginForm = ({ CloseHandler }) => {
 
     return (
         <div className='fixed inset-0 bg-black/70 flex items-center justify-center z-[1000]'>
-            <div className=' bg-gray-800 dark:bg-gray-700 w-[300px] sm:w-[350px] md:w-[400px] p-4 h-[300px] sm:h-[350px] md:h-[400px]
+            <div className=' bg-gray-800 dark:bg-gray-700 w-[350px]  md:w-[400px] p-4 h-[380px]  sm:h-[450px] md:h-[400px]
        rounded-md'>
                 <div className='flex justify-between items-center mb-3 border-b-2 border-white'>
                     <h2 className='text-2xl font-bold text-left text-white'>login form</h2>

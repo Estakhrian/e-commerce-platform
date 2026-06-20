@@ -30,9 +30,12 @@ const Navbar = () => {
                                 Ema shop
                             </a>
                             <div className="group">
-                                <button 
-                                onClick={() => setShowLoginForm(true)}
-                                className=' bg-primary  dark:bg-gray-800 transition-all duration-200 text-white
+                                <button
+                                    onClick={() => {
+                                        setShowLoginForm(true)
+                                        setIsCartOpen(false)
+                                    }}
+                                    className=' bg-primary  dark:bg-gray-800 transition-all duration-200 text-white
                                  flex items-center gap-1 group rounded-full group-hover:px-1 group-hover:py-1'>
                                     <span className='hidden group-hover:block transition-all duration-1000'>
                                         Login
@@ -41,7 +44,7 @@ const Navbar = () => {
                                 </button>
                             </div>
                         </div>
-                        {showLoginForm && <LoginForm CloseHandler={() => setShowLoginForm(false)}/>}
+                        {showLoginForm && <LoginForm CloseHandler={() => setShowLoginForm(false)} />}
                     </div>
                     {/*Search bar - order & darkmode btn*/}
                     <div className='flex justify-between items-center gap-4'>
@@ -61,7 +64,10 @@ const Navbar = () => {
                         <button
                             className='bg-primary  dark:bg-gray-800 transition-all duration-200 text-white
                                 py-1 px-2 flex items-center gap-3 group rounded-full'
-                            onClick={() => setIsCartOpen(true)}
+                            onClick={() => {
+                                setIsCartOpen(true)
+                                setShowLoginForm(false)
+                            }}
                         >
                             <span className='hidden group-hover:block transition-all duration-200'>
                                 Order
@@ -109,7 +115,7 @@ const Navbar = () => {
                 </ul>
             </div>
             {isCartOpen && <Cart setIsCartOpen={setIsCartOpen} />}
-           
+
         </div>
     )
 }
