@@ -18,8 +18,8 @@ const Cart = ({ setIsCartOpen }) => {
         <div>
           {/**header cart */}
           <div className='flex justify-between px-3 mb-2'>
-            <button onClick={() => setIsCartOpen(false)} className='text-sm font-bold'>X</button>
             <h2 className='text-xl font-bold'>Cart</h2>
+            <button onClick={() => setIsCartOpen(false)} className='text-sm font-bold'>X</button>
           </div>
           {/**show products */}
           <div>
