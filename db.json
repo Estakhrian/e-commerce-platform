@@ -121,30 +121,7 @@
     }
   ],
   "users": [
-    {
-      "username": "alireza",
-      "password": "alirezaaaaaaaaa121",
-      "email": "alireza@gmail.com",
-      "id": "yvvHFuFzACw"
-    },
-    {
-      "username": "ALIREZAE",
-      "password": "1234567asdfghjkA",
-      "email": "ALIREZA@GMAIL.COM",
-      "id": "zF0xlqW90Qc"
-    },
-    {
-      "username": "alireza",
-      "password": "asasas1212A",
-      "email": "alireza@gmail.com",
-      "id": "eWOYUKRtC58"
-    },
-    {
-      "username": "assssssssss",
-      "password": "sadfcsdfv23AS",
-      "email": "ali@gmail.com",
-      "id": "rONQ2-X9azw"
-    }
+
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }

@@ -8,6 +8,9 @@ import { FaUserCircle } from "react-icons/fa";
 import { menu, dropDownList } from "./NavabrDetails"
 import Cart from "../Cart/Cart"
 import LoginForm from "../Login/LoginForm"
+import { MdLogout } from "react-icons/md";
+import LogOut from "../Login/LogOut"
+
 
 
 
@@ -16,6 +19,13 @@ const Navbar = () => {
 
     const [isCartOpen, setIsCartOpen] = useState(false)
     const [showLoginForm, setShowLoginForm] = useState(false)
+    const [showLogOutForm, setShowLogOutForm] = useState(false)
+    const [user, setUser] = useState(() => {
+        const savedUser = localStorage.getItem("user")
+
+        return savedUser ? JSON.parse(savedUser) : null
+    })
+
 
     return (
         <div className='shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40'>
@@ -30,21 +40,37 @@ const Navbar = () => {
                                 Ema shop
                             </a>
                             <div className="group">
-                                <button
-                                    onClick={() => {
-                                        setShowLoginForm(true)
-                                        setIsCartOpen(false)
-                                    }}
-                                    className=' bg-primary  dark:bg-gray-800 transition-all duration-200 text-white
+                                {user ? (
+                                    <button
+                                        onClick={() => setShowLogOutForm(true)}
+                                        className="flex justify-center items-center gap-2 group-hover:bg-gray-800 bg-primary  dark:bg-gray-800 px-2 sm:py-0.5
+                                    transition-all duration-200 text-white group rounded-full group-hover:px-1 group-hover:py-1">
+                                        <h3 className="flex justify-center items-center gap-2 group-hover:hidden">
+                                            <FaUserCircle className="text-base" />{user.username}
+                                        </h3>
+
+                                        <h3 className="group-hover:flex justify-center items-center gap-2 hidden">
+                                            <MdLogout /> LogOut
+                                        </h3>
+                                    </button>
+                                ) : (
+                                    <button
+                                        onClick={() => {
+                                            setShowLoginForm(true)
+                                            setIsCartOpen(false)
+                                        }}
+                                        className=' bg-primary  dark:bg-gray-800 transition-all duration-200 text-white
                                  flex items-center gap-1 group rounded-full group-hover:px-1 group-hover:py-1'>
-                                    <span className='hidden group-hover:block transition-all duration-1000'>
-                                        Login
-                                    </span>
-                                    <FaUserCircle className='text-2xl group-hover:text-md cursor-pointer text-white drop-shadow-sm' />
-                                </button>
+                                        <span className='hidden group-hover:block transition-all duration-1000'>
+                                            Login
+                                        </span>
+                                        <FaUserCircle className='text-2xl group-hover:text-md cursor-pointer text-white drop-shadow-sm' />
+                                    </button>
+                                )}
                             </div>
                         </div>
-                        {showLoginForm && <LoginForm CloseHandler={() => setShowLoginForm(false)} />}
+                        {showLoginForm && <LoginForm setUser={setUser} CloseHandler={() => setShowLoginForm(false)} />}
+                        {showLogOutForm && <LogOut setUser={setUser} LogOutCloseHandler={() => { setShowLogOutForm(false) }} />}
                     </div>
                     {/*Search bar - order & darkmode btn*/}
                     <div className='flex justify-between items-center gap-4'>

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 
-const LoginForm = ({ CloseHandler }) => {
+const LoginForm = ({ CloseHandler, setUser }) => {
 
 
     const [username, setUsername] = useState("")
@@ -34,6 +34,8 @@ const LoginForm = ({ CloseHandler }) => {
                     if (res.status == 201) {
 
                         setAllValid(true)
+                        setUser(res.data)
+                        localStorage.setItem("user", JSON.stringify(res.data))
 
                         setTimeout(() => {
                             setAllValid(false)
