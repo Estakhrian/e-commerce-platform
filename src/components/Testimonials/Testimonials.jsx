@@ -6,6 +6,7 @@ import { Autoplay, Pagination } from 'swiper/modules'
 import axios from 'axios'
 
 
+
 const Testimonials = () => {
 
     const [testimonialsData, setTestimonialsData] = useState([])
@@ -13,9 +14,10 @@ const Testimonials = () => {
     useEffect(() => {
         axios.get("https://my-json-server.typicode.com/Estakhrian/e-commerce-platform/TestimonialData")
         .then(res => {
+            console.log(res)
             setTestimonialsData(res.data)
         } )
-    })
+    },[])
     return (
         <div className='py-5 mb-20'>
             <div className='container'>

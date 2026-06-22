@@ -11,7 +11,7 @@ const TopRateProducts = () => {
 
 
     useEffect(() => {
-        axios.get("https://my-json-server.typicode.com/Estakhrian/e-commerce-platformgit/ProductsData")
+        axios.get("https://my-json-server.typicode.com/Estakhrian/e-commerce-platform/ProductsData")
             .then(res => {
                 console.log(res.data)
                 setTopProductsData(res.data)
