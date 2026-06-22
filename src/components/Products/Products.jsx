@@ -1,22 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React  from 'react'
 import { FaStar } from 'react-icons/fa6'
-import axios from 'axios'
+
 import { useCart } from '../../Context/CartContext'
+import productsData from "./ProductDetails"
 
 const Products = () => {
 
-  const [ProductsData, setProductsData] = useState([])
+
   const { addToCart } = useCart()
 
 
-  useEffect(() => {
-    console.log("component loaded")
-    axios.get("https://my-json-server.typicode.com/Estakhrian/e-commerce-platform/products")
-      .then(res => setProductsData(res.data))
-  }, [])
 
 
-  console.log(ProductsData)
   return (
     <div className='mt-14 mb-20'>
       <div className='container'>
@@ -34,7 +29,7 @@ const Products = () => {
           <div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4
           lg:grid-cols-5 place-items-center gap-5'>
             {/**card section */}
-            {ProductsData.map((data) => (
+            {productsData.map((data) => (
               <div key={data.id} className='space-y-3 mb-8'
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}>

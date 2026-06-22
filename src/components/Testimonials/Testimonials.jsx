@@ -12,12 +12,12 @@ const Testimonials = () => {
     const [testimonialsData, setTestimonialsData] = useState([])
 
     useEffect(() => {
-        axios.get("https://my-json-server.typicode.com/Estakhrian/e-commerce-platform/TestimonialData")
-        .then(res => {
-            console.log(res)
-            setTestimonialsData(res.data)
-        } )
-    },[])
+        axios.get("https://raw.githubusercontent.com/Estakhrian/e-commerce-platform/refs/heads/main/db.json")
+            .then(res => {
+                console.log(res)
+                setTestimonialsData(res.data.TestimonialData)
+            })
+    }, [])
     return (
         <div className='py-5 mb-20'>
             <div className='container'>
@@ -49,7 +49,7 @@ const Testimonials = () => {
                             },
                             640: {
                                 slidesPerView: 2,
-                            }, 
+                            },
                             768: {
                                 slidesPerView: 3,
                             },
