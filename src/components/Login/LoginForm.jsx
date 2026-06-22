@@ -28,7 +28,7 @@ const LoginForm = ({ CloseHandler, setUser }) => {
                 email
             }
 
-            await axios.post("http://localhost:3000/users", userInfos)
+            await axios.post("https://my-json-server.typicode.com/Estakhrian/e-commerce-platform/users", userInfos)
                 .then(res => {
                     console.log(res)
                     if (res.status == 201) {

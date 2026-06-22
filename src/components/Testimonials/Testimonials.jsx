@@ -11,7 +11,7 @@ const Testimonials = () => {
     const [testimonialsData, setTestimonialsData] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:3000/TestimonialData")
+        axios.get("https://my-json-server.typicode.com/Estakhrian/e-commerce-platform/TestimonialData")
         .then(res => {
             setTestimonialsData(res.data)
         } )

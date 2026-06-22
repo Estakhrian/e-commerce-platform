@@ -6,13 +6,13 @@ import { useCart } from '../../Context/CartContext'
 const Products = () => {
 
   const [ProductsData, setProductsData] = useState([])
-  const {addToCart} = useCart()
+  const { addToCart } = useCart()
 
-  
+
   useEffect(() => {
-    axios.get("http://localhost:3000/Products")
-    .then(res => setProductsData(res.data))
-  },[])
+    axios.get("https://my-json-server.typicode.com/Estakhrian/e-commerce-platform/Products")
+      .then(res => setProductsData(res.data))
+  }, [])
 
 
   console.log(ProductsData)
@@ -55,8 +55,8 @@ const Products = () => {
                     <p>${data.price}</p>
                     <button className='text-xs w-[80px] bg-primary group-hover:bg-gray-800 group-hover:text-primary transition-all duration-200 text-white
                                 py-1 px-1 flex items-center gap-3 group rounded-full'
-                                onClick={() => addToCart(data)}
-                                >Add To Cart</button>
+                      onClick={() => addToCart(data)}
+                    >Add To Cart</button>
 
                   </div>
                 </div>
