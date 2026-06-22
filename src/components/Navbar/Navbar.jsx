@@ -7,7 +7,7 @@ import { FaCaretDown } from 'react-icons/fa6'
 import { FaUserCircle } from "react-icons/fa";
 import { menu, dropDownList } from "./../../Backend/NavabrDetails"
 import Cart from "../Cart/Cart"
-import LoginForm from "../Login/LoginForm"
+// import LoginForm from "../Login/LoginForm"
 import { MdLogout } from "react-icons/md";
 import LogOut from "../Login/LogOut"
 
