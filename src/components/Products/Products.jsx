@@ -2,7 +2,7 @@ import React  from 'react'
 import { FaStar } from 'react-icons/fa6'
 
 import { useCart } from '../../Context/CartContext'
-import productsData from "./ProductDetails"
+import productsData from "./../../Backend/ProductDetails"
 
 const Products = () => {
 

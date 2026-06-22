@@ -2,7 +2,7 @@ import React  from 'react'
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import { Autoplay } from 'swiper/modules'
-import imageList from './sliderDetails'
+import imageList from './../../Backend/sliderDetails'
 
 
 const Hero = () => {

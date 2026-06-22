@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterLinks, BannerImgStyle} from './FooterDetails'
+import { FooterLinks, BannerImgStyle} from '../../Backend/FooterDetails'
 import Footerlogo from "../../assets/logo/logo.png"
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaLocationArrow, FaMobileAlt } from 'react-icons/fa'
 

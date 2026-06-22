@@ -1,7 +1,18 @@
+import women1 from "./../assets/women/women.png"
+import women2 from "./../assets/women/women2.jpg"
+import women3 from "./../assets/women/women3.jpg"
+import women4 from "./../assets/women/women4.jpg"
+
+
+
+
+
+
+
 const products = [
     {
         id: "1",
-        img: "./src/assets/women/women.png",
+        img: women1,
         title: "Women Ethnic",
         rating: 5,
         color: "white",
@@ -10,7 +21,7 @@ const products = [
     },
     {
         id: "2",
-        img: "./src/assets/women/women2.jpg",
+        img: women2,
         title: "Women western",
         rating: 4.5,
         color: "Red",
@@ -19,7 +30,7 @@ const products = [
     },
     {
         id: "3",
-        img: "./src/assets/women/women3.jpg",
+        img: women3,
         title: "Goggles shirt",
         rating: 4.7,
         color: "brown",
@@ -28,7 +39,7 @@ const products = [
     },
     {
         id: "4",
-        img: "./src/assets/women/women4.jpg",
+        img: women4,
         title: "Printed T-Shirt",
         rating: 4.4,
         color: "Yellow",
@@ -37,7 +48,7 @@ const products = [
     },
     {
         id: "5",
-        img: "./src/assets/women/women2.jpg",
+        img: women1,
         title: "Fashin T-Shirt",
         rating: 4.5,
         color: "Pink",

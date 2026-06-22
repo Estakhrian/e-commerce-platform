@@ -1,23 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React  from 'react'
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/autoplay"
 import { Autoplay, Pagination } from 'swiper/modules'
-import axios from 'axios'
-
+import testimonialsData from "./../../Backend/Testimonials"
 
 
 const Testimonials = () => {
 
-    const [testimonialsData, setTestimonialsData] = useState([])
-
-    useEffect(() => {
-        axios.get("https://raw.githubusercontent.com/Estakhrian/e-commerce-platform/refs/heads/main/db.json")
-            .then(res => {
-                console.log(res)
-                setTestimonialsData(res.data.TestimonialData)
-            })
-    }, [])
     return (
         <div className='py-5 mb-20'>
             <div className='container'>

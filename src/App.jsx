@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 import TopRateProducts from './components/TopRateProducts/TopRateProducts';
 import Banner from './components/Banner/Banner';
 import Subscribe from './components/Subscribe/Subscribe';
-import Testimonials from './components/Testimonials/Testimonials';
+import Testimonials from './components/Testimonials/Testimonials'
 import Footer from './components/Footer/Footer';
 import Cart from './components/Cart/Cart';
 

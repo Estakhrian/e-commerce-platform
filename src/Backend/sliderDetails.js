@@ -1,6 +1,6 @@
-import women from "./../../assets/hero/women.png"
-import sale from "./../../assets/hero/sale.png"
-import shopping from  "./../../assets/hero/shopping.png"
+import women from "./../assets/hero/women.png"
+import sale from "./../assets/hero/sale.png"
+import shopping from  "./../assets/hero/shopping.png"
 
 
 

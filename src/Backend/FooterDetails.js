@@ -1,4 +1,4 @@
-import Banner from "../../assets/website/footer-pattern.jpg"
+import Banner from "./../assets/website/footer-pattern.jpg"
 
 
 const FooterLinks = [

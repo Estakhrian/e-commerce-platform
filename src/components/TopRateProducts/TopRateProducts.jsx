@@ -1,5 +1,5 @@
 import React  from 'react'
-import ProductsData from "./TopProductDetails"
+import topProductsDetails from "./../../Backend/topProductsDetails"
 import { FaStar } from 'react-icons/fa6'
 import { useCart } from '../../Context/CartContext'
 
@@ -22,7 +22,7 @@ const TopRateProducts = () => {
                 {/**body section */}
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-y-20 md:grid-cols-3 lg:grid-cols-4 lg:gap-8
                 place-items-center'>
-                    {ProductsData.map((data) => (
+                    {topProductsDetails.map((data) => (
                         <div key={data.id} data-aos="zoom-in" data-aos-delay="200" className='flex flex-col gap-16 rounded-2xl bg-white dark:text-white dark:bg-gray-800 hover:bg-gray-800
                         dark:hover:bg-primary hover:text-white relative shadow-xl duration-300 group max-w-[300px] h-[380px] sm:mx-3 lg:mx-0'>
                             {/**image section */}
