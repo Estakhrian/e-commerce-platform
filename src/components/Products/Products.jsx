@@ -11,7 +11,7 @@ const Products = () => {
 
   useEffect(() => {
     console.log("component loaded")
-    axios.get("https://my-json-server.typicode.com/Estakhrian/e-commerce-platform/Products")
+    axios.get("https://my-json-server.typicode.com/Estakhrian/e-commerce-platform/products")
       .then(res => setProductsData(res.data))
   }, [])
 
